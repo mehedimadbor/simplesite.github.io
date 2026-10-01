@@ -77,6 +77,36 @@ h2{font-size:clamp(26px,4vw,38px);font-weight:700;line-height:1.3;margin-bottom:
 .feat div{padding:28px 24px 28px 0;border-bottom:1px solid var(--line)}
 .feat h3{font-size:19px;margin-bottom:6px;color:#d8b4fe}
 .feat p{color:var(--mute);font-size:16px}
+.cats{display:block;margin-top:20px}
+.cat{display:grid;grid-template-columns:300px 1fr;gap:64px;align-items:center;padding:44px 0;border-top:1px solid var(--line)}
+.cat:nth-child(even) .phone{order:2}
+.cat .phone{width:300px;padding:9px;border-radius:40px}
+.cat .scr{height:500px;border-radius:32px}
+.cat .body{padding:34px 12px 14px}
+.cat .ct{max-width:520px}
+.cn{font:800 14px Sora,sans-serif;color:var(--lilac);letter-spacing:.1em}
+.cat h3{font-size:26px;margin:2px 0 14px}
+.cat ul{list-style:none;display:grid}
+.cat li{padding:12px 0;border-top:1px solid var(--line)}
+.cat li b{display:block;font-size:17px;color:#e9dcff}
+.cat li span{color:var(--mute);font-size:15px;line-height:1.5}
+.pend{font-size:10px;background:rgba(251,191,36,.18);color:#fbbf24;padding:2px 8px;border-radius:99px}
+.sv.ol{background:transparent;border:1px solid #a855f7;color:#d8b4fe}
+.tg{width:38px;height:22px;border-radius:99px;background:#a855f7;position:relative}.tg:after{content:"";position:absolute;right:3px;top:3px;width:16px;height:16px;border-radius:50%;background:#fff}
+.ok{display:inline-block;font-size:12px;color:#34d399;background:rgba(52,211,153,.14);padding:3px 10px;border-radius:99px}
+.cap2{text-align:center;color:var(--mute);font-size:13px}
+.sel{outline:2px solid #fb7185}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.chip{padding:4px 10px;border-radius:99px;background:#2a2347;font-size:12px}.chip.on{background:#a855f7}
+.rw{display:flex;justify-content:space-between;align-items:center}
+.sv{margin-top:12px;text-align:center;padding:11px;border-radius:14px;background:linear-gradient(135deg,#a855f7,#7e22ce);font-weight:700}
+.tabs2{display:flex;gap:6px;margin-bottom:10px}.tabs2 span{flex:1;text-align:center;padding:7px 0;border-radius:10px;background:#1a1433;font-size:12px;color:#a79bc7}.tabs2 .on{background:#a855f7;color:#fff}
+.mini{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#43307a;font-style:normal;font-size:12px;margin-right:6px}
+.bub{max-width:86%;background:#1a1433;border:1px solid rgba(255,255,255,.07);padding:9px 12px;border-radius:4px 16px 16px 16px;margin-bottom:8px;font-size:12.5px;line-height:1.5}
+.bub.me{margin-left:auto;background:#a855f7;border-radius:16px 4px 16px 16px}
+.dots{display:flex;gap:14px;justify-content:center;margin:26px 0}.dots i{width:13px;height:13px;border-radius:50%;border:2px solid #a855f7}.dots i.f{background:#a855f7}
+.pad{display:grid;grid-template-columns:repeat(3,64px);gap:14px;justify-content:center}.pad span{height:56px;border-radius:50%;background:#1a1433;display:grid;place-items:center;font-size:20px}.pad svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+@media(max-width:800px){.cat{grid-template-columns:1fr;gap:28px;justify-items:center}.cat:nth-child(even) .phone{order:0}.cat .phone{width:min(300px,100%)}}
 .band{background:linear-gradient(135deg,#3b0f7a,var(--deep));text-align:center;border-top:1px solid var(--line)}
 .band .lead{margin:0 auto 30px}
 footer{padding:28px 0;border-top:1px solid var(--line);color:var(--mute);font-size:14px;text-align:center}
@@ -111,9 +141,9 @@ footer{padding:28px 0;border-top:1px solid var(--line);color:var(--mute);font-si
   <p>আয়, খরচ, লোন আর সঞ্চয় লিখে রাখুন এবং মাস শেষে দেখে নিন টাকা কোথায় গেল। বাংলা ইন্টারফেসে, সহজ ও পরিষ্কার।</p>
   <div class="cta">
     <button class="btn open-modal">ওয়েব অ্যাপ খুলুন</button>
-    <a class="btn ghost" href="#preview">প্রিভিউ দেখুন</a>
+    <a class="btn ghost" href="#features">সব ফিচার দেখুন</a>
   </div>
-  <div class="stats"><span><b>বাংলা</b>সম্পূর্ণ বাংলা ইন্টারফেস</span><span><b>বিনামূল্যে</b>ব্রাউজার থেকেই চালান</span><span><b>নিরাপদ</b>লক ও ব্যালেন্স হাইড</span></div>
+  <div class="stats"><span><b>বাংলা</b>সম্পূর্ণ বাংলা ইন্টারফেস</span><span><b>বিনামূল্যে</b>ব্রাউজার থেকেই চালান</span><span><b>নিরাপদ</b>ফিঙ্গারপ্রিন্ট ও পিন লক</span></div>
 </div></div>
 
 <section class="preview" id="preview"><div class="wrap pv">
@@ -146,18 +176,40 @@ footer{padding:28px 0;border-top:1px solid var(--line);color:var(--mute);font-si
 </div></section>
 
 <section id="features"><div class="wrap">
-  <h2>যা যা পাবেন</h2>
-  <p class="lead">দৈনন্দিন হিসাব রাখার জন্য দরকারি সবকিছু একটি অ্যাপে।</p>
-  <div class="feat">
-    <div><h3>খরচ ও জমা</h3><p>প্রতিটি লেনদেন দ্রুত যোগ করুন এবং হিস্ট্রিতে দেখুন।</p></div>
-    <div><h3>লোন ট্র্যাকিং</h3><p>কাকে কত দিয়েছেন বা কার কাছ থেকে কত নিয়েছেন, সব লিখে রাখুন।</p></div>
-    <div><h3>সঞ্চয়</h3><p>সঞ্চয়ের হিসাব আলাদা করে রাখুন এবং বাড়তে দেখুন।</p></div>
-    <div><h3>একাউন্ট</h3><p>একাধিক একাউন্টের ব্যালেন্স একসাথে পরিচালনা করুন।</p></div>
-    <div><h3>AI চ্যাট</h3><p>AI চ্যাটের সাহায্যে আপনার হিসাব নিয়ে প্রশ্ন করুন।</p></div>
-    <div><h3>স্মার্ট ইনসাইট</h3><p>লেনদেন যোগ করলে অ্যাপ নিজেই বিশ্লেষণ দেখায়।</p></div>
-    <div><h3>রিমাইন্ডার</h3><p>গুরুত্বপূর্ণ পেমেন্ট ও কাজের কথা মনে করিয়ে দেয়।</p></div>
-    <div><h3>প্রাইভেসি</h3><p>ব্যালেন্স লুকানোর অপশন এবং অ্যাপ লক দিয়ে তথ্য সুরক্ষিত রাখুন।</p></div>
+  <h2>পুরো হিসাব, এক অ্যাপে</h2>
+  <p class="lead">দৈনন্দিন খরচ থেকে লোন, সঞ্চয় আর যাকাত পর্যন্ত, যা যা দরকার সব এখানে। প্রতিটি ফিচারের পাশে দেখে নিন অ্যাপে কেমন দেখায়।</p>
+  <div class="cats">
+    <article class="cat"><div class="phone sm"><div class="scr"><div class="body"><div class="ab" style="font-size:15px">লেনদেন যোগ করুন</div>
+<div class="qs"><div class="qa sel"><i>↗</i>খরচ</div><div class="qa"><i>↙</i>জমা</div><div class="qa"><i>⇡</i>লোন</div><div class="qa"><i>▥</i>সঞ্চয়</div></div>
+<div class="card"><small style="color:#a79bc7">পরিমাণ</small><b style="display:block;font:800 30px Sora,sans-serif">৳450</b></div>
+<div class="card"><small style="color:#a79bc7">খাত</small><div class="chips"><span class="chip on">খাবার</span><span class="chip">যাতায়াত</span><span class="chip">বিল</span><span class="chip">বাজার</span></div></div>
+<div class="card"><div class="rw"><span>একাউন্ট</span><b>নগদ</b></div><div class="rw" style="margin-top:8px"><span>তারিখ</span><b>আজ</b></div></div>
+<div class="sv">সেভ করুন</div></div></div></div><div class="ct"><div class="cn">০১</div><h3>দৈনন্দিন হিসাব</h3><ul><li><b>খরচ, জমা, লোন, সঞ্চয়</b><span>এক ট্যাপে ধরন বেছে লেনদেন যোগ, এডিট বা মুছুন</span></li><li><b>একাউন্ট ভিত্তিক ব্যালেন্স</b><span>একাধিক একাউন্ট ও মোট সঞ্চয় একসাথে দেখুন</span></li><li><b>খাত ও উৎস অনুযায়ী বিশ্লেষণ</b><span>কোন খাতে খরচ আর কোন উৎস থেকে আয়, আলাদা করে দেখুন</span></li><li><b>হিস্ট্রি ও ফিল্টার</b><span>পুরনো লেনদেন খুঁজুন এবং ফিল্টার করে দেখুন</span></li><li><b>আজকের হিসাব</b><span>আজকের আয়, খরচ ও শেষ ৭ দিনের খরচ</span></li></ul></div></article>
+    <article class="cat"><div class="phone sm"><div class="scr"><div class="body"><div class="ab" style="font-size:15px">লোন</div>
+<div class="tabs2"><span class="on">পাওনা ৳2,500</span><span>দেনা ৳500</span></div>
+<div class="card"><div class="rw"><span><i class="mini">র</i> রাহিম</span><b style="color:#34d399">৳2,000</b></div><div class="rw" style="margin-top:10px"><span><i class="mini">স</i> সুমন</span><b style="color:#34d399">৳500</b></div></div>
+<div class="card" style="display:flex;gap:12px;align-items:center;color:#c084fc"><svg viewBox="0 0 41 41" fill="currentColor" style="width:70px;height:70px"><rect x="0" y="0" width="5" height="5" rx="1"/><rect x="6" y="0" width="5" height="5" rx="1"/><rect x="12" y="0" width="5" height="5" rx="1"/><rect x="0" y="6" width="5" height="5" rx="1"/><rect x="12" y="6" width="5" height="5" rx="1"/><rect x="0" y="12" width="5" height="5" rx="1"/><rect x="6" y="12" width="5" height="5" rx="1"/><rect x="12" y="12" width="5" height="5" rx="1"/><rect x="24" y="0" width="5" height="5" rx="1"/><rect x="36" y="0" width="5" height="5" rx="1"/><rect x="30" y="6" width="5" height="5" rx="1"/><rect x="24" y="12" width="5" height="5" rx="1"/><rect x="36" y="12" width="5" height="5" rx="1"/><rect x="0" y="24" width="5" height="5" rx="1"/><rect x="12" y="24" width="5" height="5" rx="1"/><rect x="6" y="30" width="5" height="5" rx="1"/><rect x="0" y="36" width="5" height="5" rx="1"/><rect x="12" y="36" width="5" height="5" rx="1"/><rect x="24" y="24" width="5" height="5" rx="1"/><rect x="30" y="24" width="5" height="5" rx="1"/><rect x="36" y="30" width="5" height="5" rx="1"/><rect x="24" y="36" width="5" height="5" rx="1"/><rect x="30" y="36" width="5" height="5" rx="1"/><rect x="36" y="36" width="5" height="5" rx="1"/></svg><div style="color:#fff"><b>QR দিয়ে লোন</b><small style="display:block;color:#a79bc7">তৈরি বা স্ক্যান করুন</small></div></div>
+<div class="card"><div class="rw"><b>টাকার অনুরোধ</b><span class="pend">অপেক্ষমাণ</span></div><div class="rw" style="margin-top:8px"><span>করিম আপনাকে ধার দিয়েছেন</span><b>৳1,000</b></div><small style="color:#a79bc7">ইনবক্সে ও পপআপে দেখা যায়</small></div></div></div></div><div class="ct"><div class="cn">০২</div><h3>লোন ও দেনা-পাওনা</h3><ul><li><b>পাওনা ও দেনার তালিকা</b><span>কার কাছে পাবেন আর কাকে দেবেন, দুটোই আলাদা</span></li><li><b>QR দিয়ে লোন আদান-প্রদান</b><span>QR তৈরি করুন বা স্ক্যান করে লোন এন্ট্রি নিন</span></li><li><b>টাকা ফেরতের মেসেজ</b><span>bKash, Nagad, Rocket বা ব্যাংকের তথ্যসহ মেসেজ তৈরি করে SMS বা WhatsApp এ পাঠান</span></li><li><b>টাকার অনুরোধ</b><span>ধার দেওয়া বা ফেরত দেওয়ার অনুরোধ অন্য ব্যবহারকারীকে পাঠান। তিনি ইনবক্স ও পপআপে দেখতে পাবেন, আপনি পাঠানো তালিকায় অবস্থা দেখবেন</span></li><li><b>লোন রিমাইন্ডার</b><span>ফেরতের সময় হলে পপআপে মনে করিয়ে দেয়</span></li></ul></div></article>
+    <article class="cat"><div class="phone sm"><div class="scr"><div class="body"><div class="ab" style="font-size:15px">পরিকল্পনা</div>
+<div class="bal"><small>আজ খরচ করতে পারবেন</small><b>৳320</b><small>মাসের বাকি ১৯ দিন</small></div>
+<div class="card"><h4>মাসিক বাজেট</h4><div style="margin:8px 0"><div class="rw"><span>খাবার</span><small>3,200/4,000</small></div><div class="bar" style="margin:4px 0"><i style="display:block;height:100%;width:80%;border-radius:9px;background:#a855f7"></i></div></div><div style="margin:8px 0"><div class="rw"><span>যাতায়াত</span><small>900/1,500</small></div><div class="bar" style="margin:4px 0"><i style="display:block;height:100%;width:60%;border-radius:9px;background:#a855f7"></i></div></div><div style="margin:8px 0"><div class="rw"><span>বিল</span><small>3,000/3,000</small></div><div class="bar" style="margin:4px 0"><i style="display:block;height:100%;width:100%;border-radius:9px;background:#fb7185"></i></div></div></div>
+<div class="card"><div class="rw"><span>সঞ্চয় লক্ষ্য</span><b style="color:#34d399">৳5,000</b></div></div></div></div></div><div class="ct"><div class="cn">০৩</div><h3>পরিকল্পনা ও সঞ্চয়</h3><ul><li><b>মাসিক বাজেট</b><span>খাত ধরে বাজেট দিন, সীমা ছাড়ালে সতর্কতা পান</span></li><li><b>সঞ্চয় লক্ষ্য ও পরিকল্পনা</b><span>আয় ও সঞ্চয় ধরে প্রতিদিন কত খরচ করা যাবে, সেটা হিসাব করে দেয়</span></li><li><b>নিয়মিত এন্ট্রি</b><span>বাসা ভাড়া, বিলের মতো প্রতিমাসের খরচ নিজে থেকে যোগ হয়</span></li><li><b>রিমাইন্ডার</b><span>তারিখ, সময় ও পুনরাবৃত্তি সহ নিজের রিমাইন্ডার</span></li><li><b>যাকাত হিসাব</b><span>নিসাব, সম্পদের বিশ্লেষণ ও যাকাত পরিশোধের হিসাব</span></li></ul></div></article>
+    <article class="cat"><div class="phone sm"><div class="scr"><div class="body"><div class="ab" style="font-size:15px">AI চ্যাট</div>
+<div class="bub me">চা ৩০ টাকা খরচ</div>
+<div class="bub">৳30 খরচ যোগ হয়েছে। আজ মোট খরচ ৳30।</div>
+<div class="bub me">রাহিমের কাছে কত পাব?</div>
+<div class="bub">রাহিমের কাছে আপনি ৳2,000 পাবেন।</div>
+<div class="card" style="margin-top:12px"><h4>স্মার্ট ইনসাইট</h4><small style="color:#a79bc7">এই সপ্তাহে খাবারে খরচ গত সপ্তাহের চেয়ে ১৫% কম।</small></div></div></div></div><div class="ct"><div class="cn">০৪</div><h3>স্মার্ট টুলস</h3><ul><li><b>AI অ্যাসিস্ট্যান্ট</b><span>চ্যাটে লিখেই লেনদেন যোগ করুন, মুছুন বা হিস্ট্রি ও লোনের অবস্থা জানুন</span></li><li><b>স্মার্ট ইনসাইট</b><span>লেনদেন দেখে খরচের ধরন ও সাপ্তাহিক তুলনা দেখায়</span></li><li><b>রিপোর্ট ও প্রিন্ট</b><span>মাসিক বা নিজের বেছে নেওয়া সময়ের রিপোর্ট, প্রিন্ট ও CSV এক্সপোর্ট</span></li><li><b>হোম উইজেট</b><span>আজকের সীমা ও খরচ এক নজরে দেখার উইজেট</span></li></ul></div></article>
+    <article class="cat"><div class="phone sm"><div class="scr"><div class="body"><div class="ab" style="font-size:15px">FinTrack</div>
+<div style="text-align:center;color:#a79bc7;font-size:12px">শুভ সন্ধ্যা, Mehedi</div>
+<div class="dots"><i class="f"></i><i class="f"></i><i></i><i></i></div>
+<div class="pad"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span style="color:#c084fc"><svg viewBox="0 0 24 24"><path d="M12 11v4M8 12a4 4 0 0 1 8 0v3a8 8 0 0 1-1 4M5 12a7 7 0 0 1 14 0v2M12 15c0 3 -1 5 -3 7"/></svg></span><span>0</span><span>⌫</span></div></div></div></div><div class="ct"><div class="cn">০৫</div><h3>নিরাপত্তা ও কাস্টমাইজ</h3><ul><li><b>ফিঙ্গারপ্রিন্ট ও পিন লক</b><span>অ্যাপ খুলতে বায়োমেট্রিক বা পিন লাগে</span></li><li><b>থিম ও ভাষা</b><span>পছন্দের রঙের থিম এবং বাংলা বা ইংরেজি ভাষা</span></li><li><b>প্রোফাইল ও লোগো</b><span>নিজের ছবি, নাম ও অ্যাপের লোগো বদলান</span></li></ul></div></article>
+    <article class="cat"><div class="phone sm"><div class="scr"><div class="body"><div class="ab" style="font-size:15px">ব্যাকআপ ও সিঙ্ক</div>
+<div class="card"><h4>লোকাল ব্যাকআপ</h4><div class="sv" style="margin:0 0 8px">ব্যাকআপ ডাউনলোড করুন</div><div class="sv ol" style="margin:0">ব্যাকআপ ফিরিয়ে আনুন</div><small style="color:#a79bc7;display:block;margin-top:8px">hisab_backup_2026-10-01.json</small></div>
+<div class="card"><div class="rw"><h4 style="margin:0">ক্লাউড সিঙ্ক</h4><span class="tg"></span></div><div style="margin:8px 0;font-size:12px;color:#a79bc7">mehedi@example.com</div><div class="ok">✓ সিঙ্ক হয়েছে</div></div>
+<div class="card"><small style="color:#a79bc7">নতুন ফোনে একই ইমেইলে লগইন করলেই ডেটা ফিরে আসবে।</small></div></div></div></div><div class="ct"><div class="cn">০৬</div><h3>ব্যাকআপ ও সিঙ্ক</h3><ul><li><b>লোকাল ব্যাকআপ</b><span>ব্যাকআপ ফাইল ডাউনলোড করে Google Drive বা ফাইল ম্যানেজারে রেখে দিন</span></li><li><b>ব্যাকআপ রিস্টোর</b><span>অন্য ফোনে গেলে বা অ্যাপ রিসেট হলে ফাইল দিয়ে হিসাব ফিরিয়ে আনুন</span></li><li><b>ক্লাউড সিঙ্ক ব্যাকআপ</b><span>ইমেইল ও পাসওয়ার্ড দিয়ে একাউন্ট খুলুন, সিঙ্ক চালু রাখলে পরিবর্তন ক্লাউডে জমা হয়। চাইলে যেকোনো সময় বন্ধ করা যায়</span></li><li><b>নতুন ফোনে ফিরে পাওয়া</b><span>একই ইমেইলে লগইন করলে ক্লাউডের ডেটা নিজে থেকে ফিরে আসে</span></li><li><b>গেস্ট মোড</b><span>একাউন্ট না খুলেও অ্যাপ চালানো যায়</span></li></ul></div></article>
   </div>
+  <p class="cap2">ছবিগুলো নমুনা ডেটা দিয়ে তৈরি।</p>
 </div></section>
 
 <section class="band"><div class="wrap">
